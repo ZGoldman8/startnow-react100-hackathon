@@ -13,10 +13,6 @@ app.get('/search/:q', (req, res) => {
     axios.get("https://www.googleapis.com/books/v1/volumes?q=" + req.params.q + "&key=AIzaSyAkjJwOM2zvkrjieILXF73TtAip84SWNkA")
         .then(function (response) {
             var data = response.data;
-            // loop through data with map
-            // add recommended books into dataItem
-            // break out of loop
-            // send modified data
             res.status(200).send(data);
         })
         .catch(function (error) {
