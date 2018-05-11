@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: lightblue
+}
+
+h1 {
+  color: darkblue;
+}
+
+#bookfinder {
+  width: 75%;
+  padding-left: 10px
+}
+
+#searchBook, #authorbook {
+  width: 25%;
+}
+
+#table {
+  width: 75%;
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 0; 
+}
+
+th {
+  background-color: green;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #4EB1BA;
+  color: #222930;
+  opacity: 0.90;
+}
+
+tr:nth-child(odd) {
+  background-color: #E9E9E9;
+  opacity: 0.90;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 8em;
+  max-height: 16em;
+}
+
+strong + small {
+    display: block;
+}
+
+input[type=checkbox] {
+  margin-right: 1em;
+}
+
+div.pull-right a {
+  margin-left: 1em;
+}
