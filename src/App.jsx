@@ -31,13 +31,13 @@ export default class App extends React.Component {
         return (
             this.state.rows.map((row, index) => (
                 <tr key={row.id}>
-                    <td key={row.id}><img src={row.cover} /></td>
-                    <td key={row.id}>{row.title}{tempTitle.push(row.title)}</td>
-                    <td key={row.id}>{row.authors}</td>
-                    <td key={row.id}>{row.description}</td>
-                    <td key={row.id}>{row.pageCount}</td>
-                    <td key={row.id}>{row.publishedDate}</td>
-                    <td key={row.id}>{row.recommended}</td>
+                    <td><img src={row.cover} /></td>
+                    <td>{row.title}{tempTitle.push(row.title)}</td>
+                    <td>{row.authors}</td>
+                    <td>{row.description}</td>
+                    <td>{row.pageCount}</td>
+                    <td>{row.publishedDate}</td>
+                    <td>{row.recommended}</td>
                 </tr>
             ))
         )
@@ -63,7 +63,6 @@ export default class App extends React.Component {
                         objPairs.pageCount = data.items[i].volumeInfo.pageCount;
                         axios.get("/recommended/" + objPairs.title)
                         .then(function (data) {
-                            console.log(objPairs);
                             objPairs.recommended = data.data;
                             tempArray.push(objPairs);
                             that.setState({ rows: tempArray })
@@ -89,7 +88,6 @@ export default class App extends React.Component {
                         objPairs.pageCount = data.items[i].volumeInfo.pageCount;
                         axios.get("/recommended/" + objPairs.title)
                         .then(function (data) {
-                            console.log(objPairs);
                             objPairs.recommended = data.data;
                             tempArray.push(objPairs);
                             that.setState({ rows: tempArray })
@@ -115,7 +113,6 @@ export default class App extends React.Component {
                         objPairs.pageCount = data.items[i].volumeInfo.pageCount;
                         axios.get("/recommended/" + objPairs.title)
                         .then(function (data) {
-                            console.log(objPairs);
                             objPairs.recommended = data.data;
                             tempArray.push(objPairs);
                             that.setState({ rows: tempArray })
