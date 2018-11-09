@@ -23109,38 +23109,38 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             { key: row.id },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'td',
-                { key: row.id },
+                null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: row.cover })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'td',
-                { key: row.id },
+                null,
                 row.title,
                 tempTitle.push(row.title)
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'td',
-                { key: row.id },
+                null,
                 row.authors
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'td',
-                { key: row.id },
+                null,
                 row.description
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'td',
-                { key: row.id },
+                null,
                 row.pageCount
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'td',
-                { key: row.id },
+                null,
                 row.publishedDate
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'td',
-                { key: row.id },
+                null,
                 row.recommended
             )
         ));
@@ -23163,7 +23163,6 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     objPairs.publishedDate = data.items[i].volumeInfo.publishedDate;
                     objPairs.pageCount = data.items[i].volumeInfo.pageCount;
                     __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get("/recommended/" + objPairs.title).then(function (data) {
-                        console.log(objPairs);
                         objPairs.recommended = data.data;
                         tempArray.push(objPairs);
                         that.setState({ rows: tempArray });
@@ -23186,7 +23185,6 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     objPairs.publishedDate = data.items[i].volumeInfo.publishedDate;
                     objPairs.pageCount = data.items[i].volumeInfo.pageCount;
                     __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get("/recommended/" + objPairs.title).then(function (data) {
-                        console.log(objPairs);
                         objPairs.recommended = data.data;
                         tempArray.push(objPairs);
                         that.setState({ rows: tempArray });
@@ -23209,7 +23207,6 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     objPairs.publishedDate = data.items[i].volumeInfo.publishedDate;
                     objPairs.pageCount = data.items[i].volumeInfo.pageCount;
                     __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get("/recommended/" + objPairs.title).then(function (data) {
-                        console.log(objPairs);
                         objPairs.recommended = data.data;
                         tempArray.push(objPairs);
                         that.setState({ rows: tempArray });
@@ -23229,7 +23226,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'h1',
                     null,
-                    'Zach\'s Book Hackathon'
+                    'Book Search'
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: this.searchTextChange, id: 'searchBook', placeholder: 'Book Title' }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
@@ -23240,7 +23237,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'button',
                     { onClick: this.searchBook },
-                    'Find book!!'
+                    'Find book!'
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)

@@ -126,10 +126,10 @@ export default class App extends React.Component {
         return (
             <div>
                 <div id="bookfinder">
-                    <h1>Zach's Book Hackathon</h1>
+                    <h1>Book Search</h1>
                     <input onChange={this.searchTextChange} id="searchBook" placeholder="Book Title"></input><br /><br />
                     <input onChange={this.authorTextChange} id="authorBook" placeholder="Author Name"></input>
-                    <br /><br /><button onClick={this.searchBook}>Find book!!</button><br /><br />
+                    <br /><br /><button onClick={this.searchBook}>Find book!</button><br /><br />
                 </div><br /><br />
                 <table id="table">
                     <thead>
